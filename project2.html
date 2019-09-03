@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: gray;
+        }
+        table {
+            margin-left: 31em;
+            margin-top: 10em;
+            width: 30%;
+            text-align: center;
+            border-color: orange;
+            background-color: white;
+        }
+        tr {
+            cursor: pointer;
+        }
+        td {
+            border-style:solid ;
+            border-color:brown;
+        }
+    </style>
+</head>
+
+<body>
+    Click on any Element in the Table
+
+        <table id="table" border="1">
+
+            <tr>
+                <td>Raj</td>
+                <td>Project Manager</td>
+            </tr>
+            <tr>
+                <td>Arun</td>
+                <td>Project Leader</td>
+            </tr>
+            <tr>
+                <td>Akaash</td>
+                <td>Team Leader</td>
+            </tr>
+            <tr>
+                <td>Athiban</td>
+                <td>Module Leader</td>
+            </tr>
+            <tr>
+                <td>Gowtham</td>
+                <td>Senior Engineer</td>
+            </tr>
+            <tr>
+                <td>Babu</td>
+                <td>Project Trainee</td>
+            </tr>
+            <tr>
+                <td>Hariharn</td>
+                <td>Quality Analyst</td>
+            </tr>
+            <tr>
+                <td>Jeyakumar</td>
+                <td>Architect</td>
+            </tr>
+        </table>
+        <input type="text" id="name" style="margin-left: 37em;margin-top: 2em;width: 13%">
+        <input type="text" id="role" style="margin-left: 0em;margin-top: 2em;width: 16%">
+    
+    <script>
+        var table = document.getElementById("table");
+        for (var i = 0; i < table.rows.length; i++) {
+            table.rows[i].onclick = function () {
+                document.getElementById("name").value = this.cells[0].innerHTML;
+                document.getElementById("role").value = this.cells[1].innerHTML;
+            };
+        }
+    </script>
+
+</body>
+
+</html>
+
